@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malaysia News App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button class="login-btn" onclick="login()">Login</button>
+  </div>
+
+  <div class="news-section">
+    <h2>Select State</h2>
+    <select id="stateSelect" onchange="loadNews()">
+      <option value="">-- Select State --</option>
+      <option value="Perlis">Perlis</option>
+      <option value="Kedah">Kedah</option>
+      <option value="Penang">Penang</option>
+      <option value="Perak">Perak</option>
+      <option value="Selangor">Selangor</option>
+      <option value="Negeri Sembilan">Negeri Sembilan</option>
+      <option value="Melaka">Melaka</option>
+      <option value="Johor">Johor</option>
+      <option value="Pahang">Pahang</option>
+      <option value="Terengganu">Terengganu</option>
+      <option value="Kelantan">Kelantan</option>
+      <option value="Sarawak">Sarawak</option>
+      <option value="Sabah">Sabah</option>
+      <option value="Kuala Lumpur">Kuala Lumpur</option>
+      <option value="Labuan">Labuan</option>
+    </select>
+    <div class="paper-links" id="paperLinks"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
