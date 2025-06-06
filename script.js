@@ -60,11 +60,21 @@ function login() {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
   if (username === "admin" && password === "givemethemoney") {
-    document.querySelector(".login").style.display = "none";
-    document.querySelector(".news-section").style.display = "block";
+    localStorage.setItem("isLoggedIn", "true");
+    showApp();
   } else {
     alert("Incorrect login!");
   }
+}
+
+function showApp() {
+  document.querySelector(".login").style.display = "none";
+  document.querySelector(".news-section").style.display = "block";
+}
+
+function logout() {
+  localStorage.removeItem("isLoggedIn");
+  location.reload();
 }
 
 function loadNews() {
@@ -90,3 +100,9 @@ function loadNews() {
     });
   }
 }
+
+window.onload = () => {
+  if (localStorage.getItem("isLoggedIn") === "true") {
+    showApp();
+  }
+};
